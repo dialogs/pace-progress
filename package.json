@@ -12,6 +12,12 @@
     "type": "git",
     "url": "git://github.com/HubSpot/pace.git"
   },
+  "scripts": {
+    "build": "grunt",
+    "preversion": "npm run build",
+    "postversion": "npm publish",
+    "postpublish": "git push --follow-tags"
+  },
   "devDependencies": {
     "grunt-contrib-coffee": "~0.7.0",
     "coffee-script": "~1.6.3",
